@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Edumap-Jakarta</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body data-bs-spy="scroll" data-bs-target=".navbar">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="./assets/Logo.png" alt="" class="logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#hero">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="map.html">Dashboard Peta</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Informasi
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#infoUmum">Informasi Umum</a></li>
+                <li><a class="dropdown-item" href="#about">Isu Pendidikan</a></li>
+                <li><a class="dropdown-item" href="#aplikasiSIG">Aplikasi SIG</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Peta Tematik</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#news">Berita</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Tentang Pendidikan</a>
+            </li>
+          </ul>
+          <a href="#" class="btn btn-brand ms-lg-3">Jelajahi</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero" class="min-vh-100 d-flex align-items-center text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 d-flex justify-content-center align-items-center">
+            <div class="hero-img" data-aos="fade-right">
+              <img src="./assets/images/LayoutHero.png" alt="Hero Image" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-6 d-flex flex-column justify-content-center">
+            <h1 data-aos="fade-left" class="text-uppercase text-white fw-semibold display-4">
+              Welcome to edumap
+            </h1>
+            <h5 class="text-white mt-3 mb-4" data-aos="fade-left" data-aos-delay="100">
+              WebGIS Pendidikan Jakarta: Eksplorasi Informasi Spasial Seputar Pendidikan Jakarta
+            </h5>
+            <div data-aos="fade-left" data-aos-delay="200">
+              <a href="#" class="btn btn-brand me-2">Jelajahi</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Information -->
+    <section id="infoUmum" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="50">
+            <!-- <img src="./assets/images/hero-1.jpg"> -->
+            <div class="section-title">
+              <h1 class="display-4 fw-semibold">Informasi Umum Pendidikan Jakarta</h1>
+              <div class="line"></div>
+              <p style="text-align: center">
+                Sejak tahun 2013, DKI Jakarta merupakan daerah yang telah ditetapkan sebagai
+                Provinsi Pendidikan Inklusif oleh Kementerian Pendidikan dan Kebudayaan. Namun,
+                apakah pencapain ini sudah nyata terealisasi dengan optimal?
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-between align-items-center">
+          <div class="col-lg-6" data-aos="fade-down" data-aos-delay="50">
+            <img src="./assets/images/isupendidikan.jpg" alt="" />
+          </div>
+          <div data-aos="fade-down" data-aos-delay="150" class="col-lg-5">
+            <h1>Isu Pendidikan di Jakarta</h1>
+            <p class="mt-3 mb-4">
+              Sebagai kota global di Indonesia dengan laju pembangunan yang pesat, DKI Jakarta
+              menghadapi tantangan krusial di bidang pendidikan, yaitu tingginya angka putus
+              sekolah. Masalah ini menjadi perhatian serius, mengingat Jakarta sebagai pusat
+              perekonomian dan pemerintahan seharusnya memiliki sistem pendidikan yang inklusif dan
+              berkualitas bagi seluruh warganya. Tingginya angka putus sekolah tidak hanya
+              menghambat pertumbuhan sumber daya manusia, tetapi juga berpotensi meningkatkan
+              kesenjangan sosial dan ekonomi antar kelompok masyarakat yang dapat berdampak pada
+              pemerataan pembangunan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <!--==================== ABOUT ====================-->
+    <section class="about section" id="about">
+      <div class="about__container container grid">
+        <div class="about__data">
+          <h2 class="about__title">
+            Isu Pendidikan : <br />
+            Tingkat Pendidikan Penduduk
+          </h2>
+          <div class="about__img">
+            <div class="about__img-overlay">
+              <img src="./assets/images/Isupendidikan1.jpg" alt="" class="about__img-one" />
+            </div>
+            <br />
+            <p class="about__description">
+              Statistik menunjukkan bahwa sekitar 28% penduduk DKI Jakarta hanya menyelesaikan
+              pendidikan hingga tingkat SD. Angka ini mencerminkan tantangan serius dalam sistem
+              pendidikan di ibu kota, di mana akses dan kualitas pendidikan tidak merata. Banyak
+              siswa dari latar belakang ekonomi rendah terpaksa berhenti sekolah, sehingga tidak
+              dapat melanjutkan ke jenjang yang lebih tinggi. Hal ini menunjukkan perlunya reformasi
+              dalam sistem pendidikan untuk meningkatkan tingkat kelulusan dan memberikan akses yang
+              lebih baik kepada semua lapisan masyarakat.
+              <br />
+              <br />
+              Pemerintah DKI Jakarta telah berupaya untuk memperbaiki situasi ini dengan
+              mengimplementasikan kebijakan yang bertujuan untuk memeratakan akses pendidikan.
+              Gubernur Anies Baswedan menekankan pentingnya sistem penerimaan siswa yang adil, di
+              mana status sosial ekonomi orang tua tidak lagi menjadi faktor penentu. Sejak 2019,
+              perubahan dalam sistem rekrutmen SMP dan SMA telah dilakukan untuk memastikan bahwa
+              siswa dari berbagai latar belakang dapat mengakses sekolah favorit. Ini adalah langkah
+              penting menuju pemerataan pendidikan yang lebih baik di Jakarta.
+              <br />
+              <br />
+              Namun, masih banyak tantangan yang harus dihadapi, terutama terkait dengan kualitas
+              pendidikan di sekolah-sekolah yang ada. Meskipun ada upaya untuk meningkatkan akses,
+              kualitas pengajaran dan fasilitas di beberapa sekolah masih jauh dari memadai. Banyak
+              lulusan SMP Terbuka (SMPT) menghadapi kesulitan dalam melanjutkan pendidikan ke
+              sekolah negeri karena kualitas pembelajaran yang rendah. Oleh karena itu, penting bagi
+              pemerintah untuk tidak hanya fokus pada peningkatan akses, tetapi juga pada
+              peningkatan mutu pendidikan secara keseluruhan.
+              <br />
+              <br />
+              Reformasi pendidikan yang komprehensif diperlukan untuk memastikan bahwa semua anak di
+              Jakarta memiliki kesempatan yang sama untuk mendapatkan pendidikan berkualitas. Ini
+              termasuk pengembangan kurikulum yang lebih relevan, pelatihan guru yang efektif, dan
+              peningkatan infrastruktur pendidikan. Dengan langkah-langkah ini, diharapkan tingkat
+              kelulusan dapat meningkat dan lebih banyak siswa dapat melanjutkan ke jenjang
+              pendidikan yang lebih tinggi, sehingga mengurangi angka penduduk yang hanya
+              menyelesaikan pendidikan dasar.
+            </p>
+            <!-- <a href="#" class="button">Reserve a place</a> -->
+          </div>
+          <div class="about__img-overlay">
+            <img src="assets/img/about2.jpg" alt="" class="about__img-two" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="aplikasiSIG" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+            <div class="section-title">
+              <h1 class="display-4 fw-semibold">Aplikasi SIG untuk Pendidikan</h1>
+              <div class="line"></div>
+              <p style="text-align: center">
+                Pemanfaatan aplikasi Sistem Informasi Geografi untuk analisis isu dan permasalahan
+                pendidikan Provinsi DKI Jakarta
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="fade-down" data-aos-delay="250">
+            <div class="portfolio-item image-zoom">
+              <div class="image-zoom-wrapper">
+                <img src="./assets/Peta-Jakspace.jpg" alt="" />
+              </div>
+              <a href="./assets/Peta-Jakspace.jpg" data-fancybox="gallery" class="iconbox">
+                <i class="ri-search-2-line"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Kolom Deskripsi di Sebelah Kanan -->
+          <div class="col-md-8 d-flex align-items-center">
+            <div class="portfolio-description">
+              <h3>Deskripsi Peta</h3>
+              <p>
+                Peta prediksi tingkat risiko putus sekolah per kecamatan di DKI Jakarta tahun 2045
+                ini memberikan gambaran penting mengenai persebaran potensi putus sekolah di seluruh
+                wilayah ibu kota. Peta ini mengidentifikasi kecamatan-kecamatan dengan tingkat
+                risiko tertinggi hingga terendah, berdasarkan faktor-faktor sosial, ekonomi, dan
+                akses pendidikan yang tersedia di setiap wilayah. Dengan melihat distribusi
+                geografis ini, pemerintah dapat memprioritaskan upaya intervensi untuk mengurangi
+                risiko putus sekolah di kecamatan yang paling rentan, seperti menyediakan program
+                bantuan pendidikan, peningkatan akses transportasi menuju sekolah, dan pelatihan
+                keterampilan bagi masyarakat di daerah dengan tingkat kemiskinan yang lebih tinggi.
+                <br />
+                <br />Peta ini juga berperan penting dalam pencapaian Tujuan Pembangunan
+                Berkelanjutan (SDGs), terutama pada tujuan ke-4 yaitu "Pendidikan Berkualitas."
+                Dengan memetakan tingkat risiko putus sekolah, peta ini mendukung upaya untuk
+                memastikan akses pendidikan inklusif dan berkualitas bagi seluruh anak di DKI
+                Jakarta. Melalui kebijakan yang lebih terarah, pemerintah dapat mempersempit
+                kesenjangan pendidikan dan memperkuat kesempatan bagi semua lapisan masyarakat,
+                sehingga setiap anak memiliki peluang yang sama untuk menyelesaikan pendidikan dasar
+                hingga menengah pada tahun 2045.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG -->
+    <section id="blog" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+            <div class="section-title">
+              <h1 class="display-4 fw-semibold">Berita Terkini Pendidikan Jakarta</h1>
+              <div class="line"></div>
+              <p style="text-align: center">
+                Pendidikan Jakarta Menjadi Salah Satu Aspek Penting yang Perlu Diperhatikan !
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
+            <div class="team-member image-zoom">
+              <div class="image-zoom-wrapper">
+                <img src="./assets/images/blog-post1.jpg" alt="" />
+              </div>
+              <h5 class="mt-4">
+                Tingkatkan Akses dan Kualitas Pendidikan, Disdik DKI Jalankan "Jakarta Sekolah
+                Komunitas"
+              </h5>
+              <p>
+                KOMPAS.com – Pemerintah Provinsi (Pemprov) Daerah Khusus Ibu Kota (DKI) Jakarta
+                melalui Dinas Pendidikan (Disdik) berupaya meningkatkan akses dan kualitas
+                pendidikan di semua jenjang. Hal ini dilakukan dengan menjalankan beberapa program
+                untuk tenaga pengajar maupun sistem atau kurikulum.
+              </p>
+              <a
+                href="https://megapolitan.kompas.com/read/2023/10/11/18111311/tingkatkan-akses-dan-kualitas-pendidikan-disdik-dki-jalankan-jakarta"
+                target="_blank"
+                >Informasi Lengkap</a
+              >
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-down" data-aos-delay="250">
+            <div class="team-member image-zoom">
+              <div class="image-zoom-wrapper">
+                <img src="./assets/images/blog-post2.jpg" alt="" />
+              </div>
+              <h5 class="mt-4">Jakarta Masih Kekurangan Sekolah Negeri</h5>
+              <p>
+                AKARTA, KOMPAS —Jakarta masih kekurangan sekolah negeri di sejumlah wilayahnya. DPRD
+                DKI Jakarta mendorong pembangunan sekolah negeri itu agar terwujud pemerataan
+                seiring pendaftaran penerimaan peserta didik baru atau PPDB berdasarkan zonasi.
+                Dinas Pendidikan DKI Jakarta sudah memetakan kebutuhan sekolah negeri dan upaya
+                pemenuhannya.
+              </p>
+              <a
+                href="https://www.kompas.id/baca/metro/2023/08/08/jakarta-masih-kekurangan-sekolah-negeri"
+                target="_blank"
+                >Informasi Lengkap</a
+              >
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-down" data-aos-delay="350">
+            <div class="team-member image-zoom">
+              <div class="image-zoom-wrapper">
+                <img src="./assets/images/blog-post3.jpg" alt="" />
+              </div>
+              <h5 class="mt-4">
+                Kurikulum Merdeka di 2023: Masa Transisi, Pascapandemi hingga Bakal Diterapkan
+                Nasional
+              </h5>
+              <p>
+                Jakarta: Kementerian Pendidikan, Kebudayaan, Riset dan Teknologi (Kemendikbudristek)
+                meluncurkan Kurikulum Merdeka sejak awal 2022. Kurikulum ini disebut jauh lebih
+                ringkas, sederhana dan lebih fleksibel untuk mendukung learning loss recovery akibat
+                pandemi Covid-19.
+              </p>
+              <a
+                href="https://www.medcom.id/pendidikan/news-pendidikan/JKRdVZwb-kurikulum-merdeka-di-2023-masa-transisi-pascapandemi-hingga-bakal-diterapkan-nasional"
+                target="_blank"
+                >Informasi Lengkap</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+            <div class="section-title">
+              <h1 class="display-4 fw-semibold">Anggota Kelompok</h1>
+              <div class="line"></div>
+              <p style="text-align: center">Mari Berkenalan dengan Tim Kami</p>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 text-center">
+          <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
+            <div class="team-member image-zoom">
+              <div class="image-zoom-wrapper">
+                <img src="./assets/images/person2.jpg" alt="" />
+              </div>
+              <div class="team-member-content">
+                <h4 class="text-white">Ai Sulastri</h4>
+                <p class="mb-0 text-white">Paper Website GIS</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-down" data-aos-delay="250">
+            <div class="team-member image-zoom">
+              <div class="image-zoom-wrapper">
+                <img src="./assets/images/person1.jpg" alt="" />
+              </div>
+              <div class="team-member-content">
+                <h4 class="text-white">Khairul Anam</h4>
+                <p class="mb-0 text-white">Website GIS Workers</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-down" data-aos-delay="350">
+            <div class="team-member image-zoom">
+              <div class="image-zoom-wrapper">
+                <img src="./assets/images/person3.JPG" alt="" />
+              </div>
+              <div class="team-member-content">
+                <h4 class="text-white">Rahadyan Surya Pradana</h4>
+                <p class="mb-0 text-white">Website Workers</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row gy-5">
+            <div class="col-lg-3 col-sm-6">
+              <a href="#"><img src="./assets/Logo.png" alt="" /></a>
+              <div class="line"></div>
+              <p>Jangan Lupa Dukung dengan berlangganan Website Kami!</p>
+              <div class="social-icons">
+                <a href="https://x.com/"><i class="ri-twitter-fill"></i></a>
+                <a
+                  href="https://www.bing.com/ck/a?!&&p=1d26d79f4b48d92cf21f4ea3002d02cd3bb12bdc1e5b6c5bfd27c58652783a3cJmltdHM9MTczMDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=2e06d22d-2d57-6a8f-00a6-c6402c016bd8&psq=instagram&u=a1aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS8&ntb=1"
+                  ><i class="ri-instagram-fill"></i
+                ></a>
+                <a href="https://github.com/"><i class="ri-github-fill"></i></a>
+                <a href="#"><i class="ri-dribbble-fill"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <h5 class="mb-0 text-white">SERVICES</h5>
+              <div class="line"></div>
+              <ul>
+                <li><a href="#" target="_blank">Website</a></li>
+                <li><a href="#" target="_blank">Map Design</a></li>
+                <li><a href="#" target="_blank">Analysis</a></li>
+                <li><a href="#" target="_blank">GIS & RS</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <h5 class="mb-0 text-white">ABOUT</h5>
+              <div class="line"></div>
+              <ul>
+                <li><a href="#" target="_blank">Blog</a></li>
+                <li><a href="#" target="_blank">Services</a></li>
+                <li><a href="#" target="_blank">Company</a></li>
+                <li><a href="#" target="_blank">Career</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <h5 class="mb-0 text-white">CONTACT</h5>
+              <div class="line"></div>
+              <ul>
+                <li>Universitas Pendidikan Indonesia, No.229 40154</li>
+                <li>(022) 2013163</li>
+                <li>www.upi.edu.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row g-4 justify-content-between">
+            <div class="col-auto">
+              <p class="mb-0">© Copyright Edumap. All Rights Reserved</p>
+            </div>
+            <div class="col-auto">
+              <p class="mb-0">Dibuat Oleh<a></a> JakMappers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      target="_blank"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"
+      target="_blank"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js" target="_blank"></script>
+    <script src="./main.js" target="_blank"></script>
+  </body>
+</html>
